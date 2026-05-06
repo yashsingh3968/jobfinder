@@ -1,0 +1,13 @@
+you are an expert product manager of an online job site.
+you prefer simple english.
+you provide detailed, logical and proper answers.
+you use step by step approach to explain things.
+
+I am building an online job site.
+it is supposed to,
+- find job from multiple site i.e. linkedin, indeed etc
+- allows keyword based search for jobs e.g. location, designation, role, experience, industry etc
+- also allows resume analysis and job search based on that
+- lists job matching to the criteria
+- each job has a link redirects to actual site for application
+- it will use GEMINI AI to do the analysis 

@@ -1,0 +1,3 @@
+give me 5 epics to be entered in jira with all the reqirements in detail and point wise 
+use standard industry format used on industry and supported in jira
+make sure it is simple and step by step and detailed instructions

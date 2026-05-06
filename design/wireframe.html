@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobSeek AI | Simple Job Discovery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Ensuring touch targets meet the 44x44px requirement */
+        .touch-target { min-height: 44px; min-width: 44px; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <!-- 1. Header -->
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+            <h1 class="text-xl font-bold text-blue-600 tracking-tight">JobSeek AI</h1>
+            <nav class="space-x-6 text-sm font-medium text-gray-600">
+                <a href="#" class="hover:text-blue-600">How it Works</a>
+                <a href="#" class="hover:text-blue-600">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        
+        <!-- 2. Hero Section -->
+        <section class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold mb-4">Find your next role. Powered by AI.</h2>
+            <p class="text-gray-600 mb-8 text-lg">One search. Results from Indeed and LinkedIn.</p>
+            
+            <!-- Main Search Bar -->
+            <div class="bg-white shadow-xl rounded-lg p-2 flex flex-col md:flex-row gap-2 border border-gray-100">
+                <input type="text" placeholder="Job title, skills, or company" 
+                       class="flex-1 px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 touch-target" autofocus>
+                <input type="text" placeholder="City, State, or Remote" 
+                       class="flex-1 px-4 py-3 border-l md:border-l border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 touch-target">
+                <button class="bg-blue-600 text-white px-8 py-3 rounded-md font-bold hover:bg-blue-700 transition touch-target">
+                    Search
+                </button>
+            </div>
+        </section>
+
+        <!-- 3. Resume Upload Zone -->
+        <section class="mb-16">
+            <div class="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center bg-blue-50 hover:border-blue-400 transition cursor-pointer">
+                <p class="text-blue-700 font-medium mb-2">Drop your resume here to find jobs for your skills</p>
+                <p class="text-sm text-gray-500">Supports PDF and DOCX (Max 5MB)</p>
+            </div>
+            
+            <!-- AI Skill Tags (Hidden until upload) -->
+            <div class="mt-4 flex flex-wrap gap-2 items-center">
+                <span class="text-sm font-semibold text-gray-500 mr-2">AI Extracted Skills:</span>
+                <span class="bg-white border border-blue-200 text-blue-700 px-3 py-1 rounded-full text-xs font-bold flex items-center">
+                    Python <button class="ml-2 text-gray-400 hover:text-red-500">×</button>
+                </span>
+                <span class="bg-white border border-blue-200 text-blue-700 px-3 py-1 rounded-full text-xs font-bold flex items-center">
+                    AWS <button class="ml-2 text-gray-400 hover:text-red-500">×</button>
+                </span>
+                <span class="bg-white border border-blue-200 text-blue-700 px-3 py-1 rounded-full text-xs font-bold flex items-center">
+                    FastAPI <button class="ml-2 text-gray-400 hover:text-red-500">×</button>
+                </span>
+                <button class="text-blue-600 text-xs font-bold underline ml-2">Search with these skills</button>
+            </div>
+        </section>
+
+        <!-- 4. Results Section -->
+        <section class="space-y-4">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold">Top Job Matches</h3>
+                <span class="text-sm text-gray-500">Showing 20 results</span>
+            </div>
+
+            <!-- Job Card Example 1 -->
+            <article class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="text-lg font-bold text-gray-900">Senior Python Developer</h4>
+                    <span class="bg-blue-100 text-blue-800 text-[10px] uppercase font-black px-2 py-1 rounded">LinkedIn</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">TechSolutions Inc. • New York, NY (Remote)</p>
+                <p class="text-gray-500 text-sm mb-6 line-clamp-2 leading-relaxed">
+                    We are looking for an expert Python developer to build scalable AI microservices using Gemini and FastAPI...
+                </p>
+                <div class="flex justify-end">
+                    <button class="bg-blue-50 text-blue-600 border border-blue-200 px-6 py-2 rounded font-bold hover:bg-blue-600 hover:text-white transition touch-target">
+                        Apply on LinkedIn
+                    </button>
+                </div>
+            </article>
+
+            <!-- Job Card Example 2 -->
+            <article class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition">
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="text-lg font-bold text-gray-900">Backend Engineer</h4>
+                    <span class="bg-orange-100 text-orange-800 text-[10px] uppercase font-black px-2 py-1 rounded">Indeed</span>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">CloudStack Systems • San Francisco, CA</p>
+                <p class="text-gray-500 text-sm mb-6 line-clamp-2 leading-relaxed">
+                    Join our team to manage high-performance data pipelines and integrate third-party APIs into our core...
+                </p>
+                <div class="flex justify-end">
+                    <button class="bg-blue-50 text-blue-600 border border-blue-200 px-6 py-2 rounded font-bold hover:bg-blue-600 hover:text-white transition touch-target">
+                        Apply on Indeed
+                    </button>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+    <!-- 5. Footer -->
+    <footer class="mt-20 border-t border-gray-200 py-8 text-center text-gray-400 text-xs">
+        <p>&copy; 2026 JobSeek AI. Minimalist Job Search for Tech Leaders.</p>
+    </footer>
+
+</body>
+</html>
