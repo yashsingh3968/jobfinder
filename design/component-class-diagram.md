@@ -1,14 +1,14 @@
 ```mermaid
 classDiagram
-    class ResumeService {
-        +parse_pdf(file)
-        +get_gemini_keywords(text)
+    class helper {
+        +resume(file)
+        +search(text)
     }
-    class JobService {
+    class controller {
         +fetch_all(query, loc)
         +deduplicate(job_list)
     }
-    class GeminiClient {
+    class api {
         -api_key: str
         +generate_content(prompt)
     }
@@ -19,7 +19,7 @@ classDiagram
         +redirect_url: str
     }
 
-    ResumeService --> GeminiClient : Uses for AI
-    JobService --> JobData : Creates
-    JobService ..> ResumeService : Uses Keywords
+    helper --> api : Uses for AI
+    controller --> JobData : Creates
+    controller ..> helper : Uses Keywords
 ```
