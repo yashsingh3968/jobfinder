@@ -1,25 +1,48 @@
 ```mermaid
 classDiagram
-    class helper {
-        +resume(file)
-        +search(text)
-    }
-    class controller {
-        +fetch_all(query, loc)
-        +deduplicate(job_list)
-    }
-    class api {
-        -api_key: str
-        +generate_content(prompt)
-    }
-    class JobData {
-        +title: str
-        +company: str
-        +source: str
-        +redirect_url: str
+    class Controller {
+        +run_search()
+        +process_results()
     }
 
-    helper --> api : Uses for AI
-    controller --> JobData : Creates
-    controller ..> helper : Uses Keywords
+    class API {
+        +scrape()
+    }
+
+    class Indeed {
+        +scrape()
+    }
+
+    class Linkedin {
+        +scrape()
+    }
+
+    class Deduper {
+        +remove_duplicates(data)
+    }
+
+    class Search {
+        +gets_query()
+        +runs_request()
+    }
+
+    class LLM {
+        +analyze_job_description()
+        +gets_keywords()
+    }
+
+    class Resume {
+        +pdf()
+    }
+
+    %% Relationships
+    Controller --> Indeed : uses
+    Controller --> Linkedin : uses
+    Controller --> Deduper : checks
+    Indeed ..|> API : checks
+    Linkedin ..|> API : checks
+    
+    Controller --> Search : uses
+    Controller --> LLM : uses
+    Controller --> Resume : uses
 ```

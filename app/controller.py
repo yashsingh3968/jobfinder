@@ -22,7 +22,7 @@ def uploadResume(file: UploadFile = File(...)):
 
 @app.post("/analyzeResume")
 def analyzeResume(file: UploadFile = File(...)):
-     return {"message": "Resume analyzed", "filename": file.filename, "skills": ["Python", "FastAPI", "Machine Learning"]}
+     return {"message": "Resume analyzed", "filename": file.filename, "analysis": "This is a mock analysis of the resume."}
 
 @app.get("/health")
 def health_check():

@@ -1,3 +1,7 @@
 give me 5 epics to be entered in jira with all the reqirements in detail and point wise 
 use standard industry format used on industry and supported in jira
 make sure it is simple and step by step and detailed instructions
+
+https://jobfinderai.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog?epics=visible&atlOrigin=eyJpIjoiNThmMjliMWI2YTY0NDQ4YWE4MGVlZTQyNjdmMWI1MTgiLCJwIjoiaiJ9
+
+https://yashsingh13968.atlassian.net/wiki/x/AQB5
